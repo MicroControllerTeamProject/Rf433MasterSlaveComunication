@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Rf433Master", "Rf433Master\Rf433Master.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Rf433Slave", "Rf433Slave\Rf433Slave.vcxproj", "{B0A97301-8012-4FE2-9F0A-73C14E8A839F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_library", "_library", "{2409C547-9806-4493-9FAF-C6B618F18BEA}"
+	ProjectSection(SolutionItems) = preProject
+		..\Libraries\LSG_RFWirelessMessages\RFWirelessReceiver.cpp = ..\Libraries\LSG_RFWirelessMessages\RFWirelessReceiver.cpp
+		..\Libraries\LSG_RFWirelessMessages\RFWirelessReceiver.h = ..\Libraries\LSG_RFWirelessMessages\RFWirelessReceiver.h
+		..\Libraries\LSG_RFWirelessMessages\RFWirelessTransmitter.cpp = ..\Libraries\LSG_RFWirelessMessages\RFWirelessTransmitter.cpp
+		..\Libraries\LSG_RFWirelessMessages\RFWirelessTransmitter.h = ..\Libraries\LSG_RFWirelessMessages\RFWirelessTransmitter.h
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
+		{B0A97301-8012-4FE2-9F0A-73C14E8A839F}.Debug|x86.ActiveCfg = Debug|Win32
+		{B0A97301-8012-4FE2-9F0A-73C14E8A839F}.Debug|x86.Build.0 = Debug|Win32
+		{B0A97301-8012-4FE2-9F0A-73C14E8A839F}.Release|x86.ActiveCfg = Release|Win32
+		{B0A97301-8012-4FE2-9F0A-73C14E8A839F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A280BD8-C7C2-42E9-9D66-97BAB01FDBB3}
+	EndGlobalSection
+EndGlobal
