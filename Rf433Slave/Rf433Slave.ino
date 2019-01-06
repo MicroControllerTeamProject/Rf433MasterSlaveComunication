@@ -29,7 +29,7 @@ bool checkArrivedMessageFromMaster()
 	{
 		do {
 			data = rfWirelessReceiver.GetMessage();
-			if (data != "" && rfWirelessReceiver.GetDeviceId() == "S1")
+			if (data != "" && rfWirelessReceiver.GetDeviceId() == "B0")
 			{
 				//Program Business Logic : Insert here your logic
 				Serial.println(data);
@@ -47,14 +47,14 @@ bool checkArrivedMessageFromMaster()
 }
 void sendDataToMaster()
 {
-	rFWirelessTransmitter.startTrasmission("S1", "TD", 10);
-	float data = 0.00;
-	while (data < 0.50)
+	rFWirelessTransmitter.startTrasmission("B0", "XX", 1);
+	float data = 15.00;
+	/*while (data < 0.50)
 	{
-		data = data + 0.05;
+		data = data + 0.05;*/
 
-		rFWirelessTransmitter.SendBufferData("S1", "T", "TD", data, "0", "0");
-	}
-	rFWirelessTransmitter.endTrasmission("S1", "TD");
+		rFWirelessTransmitter.SendBufferData("B0", "X", "XX", data, "0", "0");
+	//}
+	rFWirelessTransmitter.endTrasmission("B0", "XX");
 }
 
