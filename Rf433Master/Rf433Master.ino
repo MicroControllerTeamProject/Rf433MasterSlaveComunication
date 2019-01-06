@@ -28,25 +28,27 @@ void loop()
 		}
 		ciclo++;
 	}
-	trasmitMessageToSlave();
+
+	trasmitMessageToSlave(devicesID[ciclo]);
+
 	//wait for receve data from slave
 	for (int i = 0; i < 50; i++)
 	{
-		if (receiveMessageFromSlave()) return;
+		if (receiveMessageFromSlave(devicesID[ciclo])) return;
 	}
 }
-void trasmitMessageToSlave()
+void trasmitMessageToSlave(char* deviceId)
 {
-	rFWirelessTransmitter.startTrasmission(devicesID[ciclo], "XX", 1);
+	rFWirelessTransmitter.startTrasmission(deviceId, "XX", 1);
 	float data = 0.00;
 	/*while (data < 0.10)
 	{
 		data = data + 0.05;*/
-		rFWirelessTransmitter.SendBufferData(devicesID[ciclo], "XX", "X",  data, "0", "0");
+		rFWirelessTransmitter.SendBufferData(deviceId, "XX", "X",  data, "0", "0");
 	//}
-	rFWirelessTransmitter.endTrasmission(devicesID[ciclo], "XX");
+	rFWirelessTransmitter.endTrasmission(deviceId, "XX");
 }
-bool receiveMessageFromSlave()
+bool receiveMessageFromSlave(char* deviceId)
 {
 	bool response = false;
 	String data = "";
@@ -56,7 +58,7 @@ bool receiveMessageFromSlave()
 	{
 		do {
 			data = rfWirelessReceiver.GetMessage();
-			if (data != "" && rfWirelessReceiver.GetDeviceId() == devicesID[ciclo])
+			if (data != "" && rfWirelessReceiver.GetDeviceId() == deviceId)
 			{
 				//Program Business Logic : Insert here your logic
 				Serial.println(data);
