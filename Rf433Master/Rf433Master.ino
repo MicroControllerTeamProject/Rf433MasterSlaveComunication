@@ -44,7 +44,7 @@ void trasmitMessageToSlave(char* deviceId)
 	/*while (data < 0.10)
 	{
 		data = data + 0.05;*/
-		rFWirelessTransmitter.SendBufferData(deviceId, "XX", "X",  data, "0", "0");
+		rFWirelessTransmitter.sendBufferData(deviceId, "XX", "X",  data, "0", "0");
 	//}
 	rFWirelessTransmitter.endTrasmission(deviceId, "XX");
 }

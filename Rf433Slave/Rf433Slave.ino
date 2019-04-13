@@ -53,7 +53,7 @@ void sendDataToMaster()
 	{
 		data = data + 0.05;*/
 
-		rFWirelessTransmitter.SendBufferData("B0", "X", "XX", data, "0", "0");
+		rFWirelessTransmitter.sendBufferData("B0", "X", "XX", data, "0", "0");
 	//}
 	rFWirelessTransmitter.endTrasmission("B0", "XX");
 }
