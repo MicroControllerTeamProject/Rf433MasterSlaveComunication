@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2000
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Rf433Master", "Rf433Master\Rf433Master.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
 EndProject
@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_library", "_library", "{24
 		..\Libraries\LSG_RFWirelessMessages\RFWirelessTransmitter.cpp = ..\Libraries\LSG_RFWirelessMessages\RFWirelessTransmitter.cpp
 		..\Libraries\LSG_RFWirelessMessages\RFWirelessTransmitter.h = ..\Libraries\LSG_RFWirelessMessages\RFWirelessTransmitter.h
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rf433SimpleMaster", "rf433SimpleMaster\rf433SimpleMaster.vcxproj", "{50F1CDD1-14BD-49C3-B610-72B1942AC1B7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rf433SimpleSlave", "rf433SimpleSlave\rf433SimpleSlave.vcxproj", "{1AEA89D0-402D-4FEE-980A-A7BCD1706BA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{B0A97301-8012-4FE2-9F0A-73C14E8A839F}.Debug|x86.Build.0 = Debug|Win32
 		{B0A97301-8012-4FE2-9F0A-73C14E8A839F}.Release|x86.ActiveCfg = Release|Win32
 		{B0A97301-8012-4FE2-9F0A-73C14E8A839F}.Release|x86.Build.0 = Release|Win32
+		{50F1CDD1-14BD-49C3-B610-72B1942AC1B7}.Debug|x86.ActiveCfg = Debug|Win32
+		{50F1CDD1-14BD-49C3-B610-72B1942AC1B7}.Debug|x86.Build.0 = Debug|Win32
+		{50F1CDD1-14BD-49C3-B610-72B1942AC1B7}.Release|x86.ActiveCfg = Release|Win32
+		{50F1CDD1-14BD-49C3-B610-72B1942AC1B7}.Release|x86.Build.0 = Release|Win32
+		{1AEA89D0-402D-4FEE-980A-A7BCD1706BA5}.Debug|x86.ActiveCfg = Debug|Win32
+		{1AEA89D0-402D-4FEE-980A-A7BCD1706BA5}.Debug|x86.Build.0 = Debug|Win32
+		{1AEA89D0-402D-4FEE-980A-A7BCD1706BA5}.Release|x86.ActiveCfg = Release|Win32
+		{1AEA89D0-402D-4FEE-980A-A7BCD1706BA5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

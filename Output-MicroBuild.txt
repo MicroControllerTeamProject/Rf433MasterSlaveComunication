@@ -1,8 +1,6 @@
-﻿Visual Micro free version. CTRL+click for secure purchase http://www.visualmicro.com/page/shop.aspx
-
-Compiling 'Rf433Slave' for 'Arduino Nano w/ ATmega328P'
-Program size: 11,450 bytes (used 37% of a 30,720 byte maximum) (2.44 secs)
-Minimum Memory Usage: 484 bytes (24% of a 2048 byte maximum)
+﻿Compiling 'rf433SimpleSlave' for 'ATmega328P (Arduino Nano)'
+Program size: 9,384 bytes (used 31% of a 30,720 byte maximum) (2.70 secs)
+Minimum Memory Usage: 459 bytes (22% of a 2048 byte maximum)
  
-Uploading 'Rf433Slave' to 'Arduino Nano w/ ATmega328P' using 'COM12'
+Uploading 'rf433SimpleSlave' to 'ATmega328P (Arduino Nano)' using 'COM7'
 	The upload process has finished.

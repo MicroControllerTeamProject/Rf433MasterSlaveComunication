@@ -4,6 +4,12 @@
 RFWirelessReceiver rfWirelessReceiver(11, 13, 500);
 RFWirelessTransmitter rFWirelessTransmitter(12, 50, 500);
 
+float dataValue[6] = { 13.45,12.56,14.80,11.50,13.67,12.89 };
+
+char* responseDataId[6] = { "B0","B1","B2","B3","B4","B5" };
+
+char* thisDeviceName = "BY";
+
 void setup()
 {
 	Serial.begin(9600);
@@ -19,6 +25,17 @@ void loop()
 		sendDataToMaster();
 	}
 }
+
+bool checkDataIdValue(char* value)
+{
+	for (int i = 0; i < (sizeof(responseDataId) / sizeof(responseDataId[0])); i++)
+	{
+		//Serial.println(a[i]);
+		if (responseDataId[i] == value) { return true; }
+	}
+	return false;
+}
+
 bool checkArrivedMessageFromMaster()
 {
 	bool result = false;
@@ -29,7 +46,9 @@ bool checkArrivedMessageFromMaster()
 	{
 		do {
 			data = rfWirelessReceiver.GetMessage();
-			if (data != "" && rfWirelessReceiver.GetDeviceId() == "B0")
+			char* valueToFind;
+			rfWirelessReceiver.GetSensorID().toCharArray(valueToFind, rfWirelessReceiver.GetSensorID().length());
+			if (data != "" && rfWirelessReceiver.GetDeviceId() == thisDeviceName && checkDataIdValue(valueToFind))
 			{
 				//Program Business Logic : Insert here your logic
 				Serial.println(data);
@@ -45,6 +64,7 @@ bool checkArrivedMessageFromMaster()
 	}
 	return result;
 }
+
 void sendDataToMaster()
 {
 	rFWirelessTransmitter.startTrasmission("B0", "XX", 1);
