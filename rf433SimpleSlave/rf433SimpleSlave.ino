@@ -1,6 +1,6 @@
 #include <VirtualWire.h>
 #include <RFWirelessReceiver.h>
-RFWirelessReceiver rfWirelessReceiver(11, 50, 500);
+RFWirelessReceiver rfWirelessReceiver(11, 50, 50);
 
 float dataValue[6] = { 13.45,12.56,14.80,11.50,13.67,12.89 };
 char* responseDataId[6] = { "B0","B1","B2","B3","B4","B5" };
@@ -37,8 +37,8 @@ bool checkArrivedMessageFromMaster()
 				/*Serial.println(data);
 				Serial.println(rfWirelessReceiver.GetSensorID());*/
 			}
-			char* valueToFind;
-			rfWirelessReceiver.GetSensorID().toCharArray(valueToFind, rfWirelessReceiver.GetSensorID().length());
+			//char* valueToFind;
+			//rfWirelessReceiver.GetSensorID().toCharArray(valueToFind, rfWirelessReceiver.GetSensorID().length());
 			/*if (data != "" && rfWirelessReceiver.GetDeviceId() == thisDeviceName && checkDataIdValue(valueToFind))
 			{
 				Serial.println("Entro qui!");*/
@@ -58,6 +58,20 @@ bool checkArrivedMessageFromMaster()
 	return result;
 }
 
+bool checkArrivedSimpeMessage()
+{
+	bool result = false;
+	String data = "";
+	data = rfWirelessReceiver.GetMessage();
+	delay(100);
+	if (data == "OK")
+	{
+		Serial.println(data);
+		result = true;
+	}
+	return result;
+}
+
 void setup()
 {
 	Serial.begin(9600);
@@ -69,13 +83,14 @@ void setup()
 
 void loop()
 {
+	//checkArrivedMessageFromMaster();
 	//Serial.println(checkArrivedMessageFromMaster());
 	if (checkArrivedMessageFromMaster() == true)
 	{
 		timer = millis();
 		Serial.println("resetto");
 	}
-	if (millis() - timer > 10000)
+	if (millis() - timer > 40000)
 	{
 		while (true)
 		{

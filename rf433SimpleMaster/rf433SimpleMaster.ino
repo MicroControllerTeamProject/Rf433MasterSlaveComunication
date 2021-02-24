@@ -1,7 +1,7 @@
 #include <VirtualWire.h>
 #include <RFWirelessTransmitter.h>
 
-RFWirelessTransmitter rFWirelessTransmitter(12, 50, 500);
+RFWirelessTransmitter rFWirelessTransmitter(12, 50, 50);
 
 char* slaveDeviceId[1] = { "BY" };
 char* requestDataId[6] = { "B0","B1","B2","B3","B4","B5" };

@@ -1,6 +1,4 @@
 ﻿Compiling 'rf433SimpleSlave' for 'ATmega328P (Arduino Nano)'
-Program size: 9,384 bytes (used 31% of a 30,720 byte maximum) (2.70 secs)
-Minimum Memory Usage: 459 bytes (22% of a 2048 byte maximum)
+Program size: 9,096 bytes (used 30% of a 30,720 byte maximum) (3.13 secs)
+Minimum Memory Usage: 413 bytes (20% of a 2048 byte maximum)
  
-Uploading 'rf433SimpleSlave' to 'ATmega328P (Arduino Nano)' using 'COM7'
-	The upload process has finished.
