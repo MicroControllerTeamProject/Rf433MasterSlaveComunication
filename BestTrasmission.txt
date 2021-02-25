@@ -1,0 +1,7 @@
+1)Fare molta attenzione all'alimentazione, se disturbata non trasmette bene.
+2)Provare a registrare il ricevitore con la vite per migliorare la ricezione.
+3)Se usate basette millefori attaccare il fili il piu' vicino possibile ai dispositivi tx e rx(molto rilevante).
+4)Usare dai 9 ai 12 v per trasmettitore.
+5)Antenne non piu' lunghe di 17 cm.
+6)Se regolati bene possono trasmettere una decina di metri anche traverso muri ed esterno. 
+

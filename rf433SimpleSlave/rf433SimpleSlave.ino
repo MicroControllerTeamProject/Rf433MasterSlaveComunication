@@ -83,23 +83,8 @@ void setup()
 
 void loop()
 {
-	//checkArrivedMessageFromMaster();
-	//Serial.println(checkArrivedMessageFromMaster());
-	if (checkArrivedMessageFromMaster() == true)
-	{
-		timer = millis();
-		Serial.println("resetto");
-	}
-	if (millis() - timer > 40000)
-	{
-		while (true)
-		{
-			digitalWrite(13, LOW);
-			delay(1000);
-			digitalWrite(13, HIGH);
-			delay(1000);
-		}
-	}
+	checkArrivedMessageFromMaster();
+	
 }
 
 
