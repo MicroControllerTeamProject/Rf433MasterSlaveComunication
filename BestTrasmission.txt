@@ -2,6 +2,7 @@
 2)Provare a registrare il ricevitore con la vite per migliorare la ricezione.
 3)Se usate basette millefori attaccare il fili il piu' vicino possibile ai dispositivi tx e rx(molto rilevante).
 4)Usare dai 9 ai 12 v per trasmettitore.
-5)Antenne non piu' lunghe di 17 cm.
+5)Antenne non piu' lunghe di 17 cm, se problemi  provare ad allungare antenna tx.
 6)Se regolati bene possono trasmettere una decina di metri anche traverso muri ed esterno. 
+7)Sembra rilevante orientamento RX, se rivolto con basetta senza componenti verso TX riceve meglio da lunga distanza.
 

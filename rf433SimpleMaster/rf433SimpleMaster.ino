@@ -1,7 +1,7 @@
 #include <VirtualWire.h>
-#include <RFWirelessTransmitter.h>
+#include "RFWirelessTransmitter.h"
 
-RFWirelessTransmitter rFWirelessTransmitter(12, 50, 50);
+RFWirelessTransmitter rFWirelessTransmitter(12, 50, 500);
 
 char* slaveDeviceId[1] = { "BY" };
 char* requestDataId[6] = { "B0","B1","B2","B3","B4","B5" };
@@ -16,7 +16,8 @@ void setup()
 
 void loop()
 {
-	trasmitMessageToSlave(slaveDeviceId[0], requestDataId[0]);
+	rFWirelessTransmitter.sendSimpleMessage("OK");
+	//trasmitMessageToSlave(slaveDeviceId[0], requestDataId[0]);
 	//delay(1000);
 }
 void trasmitMessageToSlave(char* deviceId, char* dataId)

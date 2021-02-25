@@ -21,5 +21,13 @@
     <ClInclude Include="__vm\.rf433SimpleSlave.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Libraries\LSG_RFWirelessMessages\RFWirelessReceiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Libraries\LSG_RFWirelessMessages\RFWirelessReceiver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #include <VirtualWire.h>
-#include <RFWirelessReceiver.h>
-RFWirelessReceiver rfWirelessReceiver(11, 50, 50);
+#include "RFWirelessReceiver.h"
+RFWirelessReceiver rfWirelessReceiver(11, 50, 500);
 
 float dataValue[6] = { 13.45,12.56,14.80,11.50,13.67,12.89 };
 char* responseDataId[6] = { "B0","B1","B2","B3","B4","B5" };
@@ -83,8 +83,32 @@ void setup()
 
 void loop()
 {
-	checkArrivedMessageFromMaster();
-	
+	//rfWirelessReceiver.GetSimpleMessage();
+	if (rfWirelessReceiver.GetSimpleMessage() == "OK")
+	{
+		timer = millis();
+		Serial.println("resetto");
+	}
+	if (millis() - timer > 10000)
+	{
+		while (true)
+		{
+			alarm();
+			digitalWrite(13, LOW);
+			delay(1000);
+			digitalWrite(13, HIGH);
+			delay(1000);
+		}
+	}
+	//checkArrivedMessageFromMaster();
+}
+
+
+void alarm()
+{
+	tone(7, 400, 500);
+	delay(1000);
+	noTone(7);
 }
 
 
