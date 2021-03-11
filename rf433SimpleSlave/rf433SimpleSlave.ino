@@ -76,6 +76,8 @@ void setup()
 {
 	Serial.begin(9600);
 	pinMode(13, OUTPUT);
+	pinMode(8, OUTPUT);
+	digitalWrite(8, HIGH);
 	rfWirelessReceiver.begin();
 	Serial.println("Begin receveing");
 	timer = millis();
@@ -94,6 +96,7 @@ void loop()
 		while (true)
 		{
 			alarm();
+			externalInterrupt();
 			digitalWrite(13, LOW);
 			delay(1000);
 			digitalWrite(13, HIGH);
@@ -109,6 +112,15 @@ void alarm()
 	tone(7, 400, 500);
 	delay(1000);
 	noTone(7);
+}
+
+void externalInterrupt()
+{
+	
+	digitalWrite(8, LOW);
+	delay(300);
+	digitalWrite(8, HIGH);
+	delay(300);
 }
 
 
