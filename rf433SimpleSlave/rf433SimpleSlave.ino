@@ -85,7 +85,17 @@ void setup()
 
 void loop()
 {
-	//rfWirelessReceiver.GetSimpleMessage();
+	//i++;
+	////Serial.println(i);
+	//RFWirelessReceiver rfWirelessReceiver(11, 50, i);
+	//delay(50);
+	//String x = rfWirelessReceiver.GetSimpleMessage();
+	//if ( x != "")
+	//{
+	//	Serial.println(x);
+	//}
+	//
+	//return;
 	if (rfWirelessReceiver.GetSimpleMessage() == "OK")
 	{
 		timer = millis();
@@ -93,19 +103,19 @@ void loop()
 	}
 	if (millis() - timer > 10000)
 	{
-		while (true)
+		
+		for(int i=0;i<3;i++)
 		{
-			alarm();
+			//alarm();
 			externalInterrupt();
-			digitalWrite(13, LOW);
-			delay(1000);
 			digitalWrite(13, HIGH);
+			delay(1000);
+			digitalWrite(13, LOW);
 			delay(1000);
 		}
 	}
 	//checkArrivedMessageFromMaster();
 }
-
 
 void alarm()
 {
